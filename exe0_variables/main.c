@@ -3,7 +3,7 @@
 
 
 void foo(int *a) {
-    a = a + 1; // acessa variavel global
+    *a = *a + 1; // acessa variavel global
 }
 
 void main(void) {
@@ -16,5 +16,5 @@ void main(void) {
             b = 1;
         }
     }
-    printf("%d \n",a);
+    printf("%d \n",b);
 }
