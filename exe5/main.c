@@ -22,10 +22,16 @@ int main() {
 
         if (!gpio_get(BTN_PIN)) {
             printf("Botao 1: %d\n", cnt_1++);
+            sleep_ms(50);
+            while(!gpio_get(BTN_PIN)){
+            }
         }
 
         if (!gpio_get(BTN_PIN_2)) {
             printf("Botao 2: %d\n", cnt_2++);
+            sleep_ms(50);
+            while(!gpio_get(BTN_PIN_2)){
+            }
         }
     }
 }
